@@ -18,8 +18,8 @@ body {
 }
 
 .heart {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     background-color: rgb(223, 155, 155);
     position: relative;
     transform: rotate(-45deg);
@@ -31,21 +31,21 @@ body {
 .heart:before,
 .heart:after {
     content: "";
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     background-color: rgb(223, 155, 155);
     position: absolute;
     border-radius: 50%;
 }
 
 .heart:before {
-    top: -75px;
+    top: -150px;
     left: 0;
 }
 
 .heart:after {
     top: 0;
-    left: 75px;
+    left: 150px;
 }
 
 @keyframes pulse {
@@ -73,12 +73,12 @@ body {
 }
 
 .popup img {
-    width: 200px;
+    width: 400px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .popup p {
-    font-size: 10px;
+    font-size: 20px;
 }

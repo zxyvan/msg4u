@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    background-image: url('sparkle.gif'); 
+    background-repeat: repeat; 
+    background-size: auto; 
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.heart {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(223, 155, 155);
+    position: relative;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    animation: pulse 1s infinite;
+    transition: opacity 0.5s ease;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: rgb(223, 155, 155);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -75px;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    left: 75px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+    100% {
+        transform: scale(1) rotate(-45deg);
+    }
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-justify: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.popup img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    font-size: 10px;
+}
